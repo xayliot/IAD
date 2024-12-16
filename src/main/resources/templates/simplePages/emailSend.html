@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Форма отправки email</title>
+</head>
+<body>
+<h1>Отправить email</h1>
+<form method="post" th:action="@{/simplePages/emailSend}">
+    <label for="to">Кому:</label>
+    <input type="email" id="to" name="to" required><br>
+
+    <label for="subject">Тема:</label>
+    <input type="text" id="subject" name="subject" required><br>
+
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message" required></textarea><br>
+
+    <button type="submit">Отправить</button>
+</form>
+</body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Пример кнопки POST</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form method="post" th:action="@{/simplePages/emailSend}">-->
+<!--    <button type="submit">Отправить POST</button>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->

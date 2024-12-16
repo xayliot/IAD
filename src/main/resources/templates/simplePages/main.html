@@ -1,0 +1,190 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<script src="/js/mainJs.js"></script>
+<script src="/js/index.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/mainStyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<body>
+<header>
+    <nav>
+        <div class="wrapper">
+            <div class="logo stocktext">
+                <img class="logo" src="/images/logo.png" alt="">
+            </div>
+            <div class="name stocktext">
+                Congrat system
+            </div>
+        </div>
+        <div class="wrapper">
+            <div >
+                <button class="friend stocktext shadow buttons-style" onclick="hidefriend()" type="button">Друзья</button>
+            </div>
+            <div >
+                <button class="congratilation stocktext shadow" onclick="hideCongrat()" type="button">Поздравления</button>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="github stocktext">
+                <img src="/images/github-logo.png" alt="" class="git">
+                <a href="https://github.com/xayliot/IAD" class="gitsrc">Github</a>
+            </div>
+
+            <button class="exitt stocktext" onclick="logout()">Выход</button>
+        </div>
+    </nav>
+
+    <aside class="card full">
+        <h1 aria-label="Hi! I'm a developer">
+            Поздравляйте&nbsp;<span class="typewriter"></span>
+        </h1>
+
+        <h1 aria-label="Hi! I'm a developer">
+            Поздравляйте&nbsp;<span class="typewriter thick"></span>
+        </h1>
+
+        <h1 aria-label="Hi! I'm a developer">
+            Поздравляйте&nbsp;<span class="typewriter nocaret"></span>
+    </aside>
+
+    <main class="main-friend">
+        <div class="zzz"> </div>
+        <aside class="card hidefriend hide" id="addfriend" >
+            <h2 class="add-friend_lable">Давайте добавим друга?</h2>
+            <!--<span class="close-button" onclick="FriendPopupclose()">&times;</span>--->
+
+            <form class="card-form" method="post" th:action="@{/api/friends/add}">
+
+                <div class="input">
+                    <input class="input-field" type="email" id="friend_email" name="friend_email" required>
+                    <label class="input-label" for="friend_email">Электронная почта:</label>
+
+                </div>
+                <div class="input">
+                    <input class="input-field" type="text" id="friend_surname" name="friend_surname" required>
+                    <label class="input-label" for="friend_surname">Фамилия:</label>
+                </div>
+
+                <div class="input">
+                    <input class="input-field" type="text" id="friend_date_of_birth" name="friend_date_of_birth"
+                           required>
+                    <label class="input-label" for="friend_date_of_birth">Дата рождения:</label>
+
+                </div>
+                <div class="input">
+
+                    <input class="input-field" type="text" id="friend_name" name="friend_name" required>
+                    <label class="input-label" for="friend_name">Имя:</label>
+
+                </div>
+                <button class="submit" onclick="AddFriendCheck()" type="button">Добавить</button>
+            </form>
+
+            </ul>  <h2>Список друзей</h2>
+            <ul id="friends-list">
+            </ul>
+
+        </aside>
+        <div class="zzz"> </div>
+        <aside class="card hidecongrat hide">
+            <div class="send_wrapper">
+
+                <h2 class="send_lable">Готовы отправить поздравление?</h2>
+                <h3 class="send_lable">Получатель есть в друзьях?</h3>
+                <button class="hover stocktext shadow" onclick="hideForm1()" type="button">Да</button>
+                <button class="hover stocktext shadow" onclick="hideForm2()" type="button">Нет</button>
+            </div>
+
+
+            <form class="card-form form1" method="post" th:action="@{/api/emails/send}">
+                <div class="input">
+                    <input class="input-field" type="email" id="to" name="to" required>
+                    <label class="input-label" for="to">Кому:</label>
+
+                </div>
+
+                <div class="input">
+                    <input class="input-field" type="text" id="subject" name="subject" required>
+                    <label class="input-label" for="subject">Тема:</label>
+
+                </div>
+                <div class="input">
+                    <input class="input-field" id="message" name="message" required></input>
+                    <label class="input-label" for="message">Сообщение:</label>
+
+                </div>
+                <button class="submit1" onclick="SendEmailCheck()" type="button">Отправить</button>
+                <button class="submit1" id="datetimebutton2" onclick="DateTimeButton2()" type="button">Выбрать дату
+                    и время
+                    отправки</button>
+                <input type="datetime-local" id="dateTimePicker2" name="selectedDateTime" hidden>
+            </form>
+
+
+
+
+
+            <form class="card-form form2 hide" method="post" th:action="@{/api/emails/send}">
+                <div class="input">
+                    <input class="input-field" type="text" id="title" name="title" required>
+                    <label class="input-label" for="to">Заголовок:</label>
+
+                </div>
+
+                <div class="input">
+                    <input class="input-field" type="text" id="text" name="text" required>
+                    <label class="input-label" for="subject">Текст сообщения:</label>
+
+                </div>
+
+                <div class="input">
+                    <input class="input-field" type="text" id="attachment" name="attachment" required></input>
+                    <label class="input-label" for="attachment">Приложение:</label>
+
+                </div>
+                <!-- <select id="friendlst hide" name="friends">
+                </select>-->
+                <button class="submit1" onclick="CongratSend()" type="button">Отправить</button>
+                <button class="submit1" id="datetimebutton" onclick="DateTimeButton()" type="button">Выбрать дату и
+                    время
+                    отправки</button>
+                <input type="datetime-local" id="dateTimePicker" name="selectedDateTime" hidden>
+
+            </form>
+
+
+            <h2>Список отправленных поздравлений</h2>
+            <ul id="congrat-list">
+            </ul>
+
+
+        </aside>
+
+
+        <div class="popup" id="success-popup" style="display: none;">
+            <div class="popup-content">
+                <span class="close-button" onclick="closePopup()">&times;</span>
+                <p id="success-message">cdcdc</p>
+                <button onclick="closePopup()">  </button>
+            </div>
+        </div>
+
+        <div class="popup" id="friend_success" style="display: none;">
+            <div class="popup-content">
+                <span class="close-button" onclick="FriendSuccessPopupclose()">&times;</span>
+                <p> s  sssc</p>
+                <button onclick="FriendSuccessPopupclose()">  </button>
+            </div>
+        </div>
+
+    </main>
+
+</header>
+
+</body>
+<script>src = "index.js"</script>

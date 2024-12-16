@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <div class="login-box">
+    <h2>Регистрация</h2>
+    <link rel="stylesheet" href="/css/regStyle.css">
+    <form th:method= "POST" th:action="@{/authReg/reg}" th:object="${user}">
+        <div class="user-box">
+            <input type="text" name="name" th:field="*{name}" required="">
+            <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+            <label>Имя</label>
+        </div>
+
+        <div class="user-box">
+            <input type="text" name="surname" th:field="*{surname}" required="">
+            <div style="color:red" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Surname Error</div>
+            <label>Фамилия</label>
+        </div>
+
+        <div class="user-box">
+            <input type="text" name="username" th:field="*{username}" required="">
+            <div style="color:red" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</div>
+            <label>Имя пользователя</label>
+        </div>
+
+        <div class="user-box">
+            <input type="text" name="date_of_birth" th:field="*{dateOfBirth}" required="">
+            <div style="color:red" th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}">DateOfBirth Error</div>
+            <label>Дата рождения</label>
+        </div>
+
+        <div class="user-box">
+            <input type="text" name="email" th:field="*{email}" required="">
+            <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</div>
+            <label>Электронная почта</label>
+        </div>
+
+        <div class="user-box">
+            <input type="password" name="password" th:field="*{password}" required="">
+            <div style="color:red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</div>
+            <label>Пароль</label>
+        </div>
+
+
+        <a>
+            <input type="submit" value="Регистрация" is="submit" />
+        </a>
+    </form>
+</div>
+</html>

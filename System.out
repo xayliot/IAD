@@ -1,0 +1,61 @@
+2024-12-16T19:40:28.917+03:00  INFO 796 --- [main] r.p.c.CongratSystemApplication           : Starting CongratSystemApplication using Java 17.0.12 with PID 796 (C:\Users\Anton\Desktop\congratSystem\target\classes started by Anton in C:\Users\Anton\Desktop\congratSystem)
+2024-12-16T19:40:28.924+03:00  INFO 796 --- [main] r.p.c.CongratSystemApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-16T19:40:30.229+03:00  INFO 796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-16T19:40:30.313+03:00  INFO 796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+2024-12-16T19:40:31.170+03:00  INFO 796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-16T19:40:31.181+03:00  INFO 796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-16T19:40:31.181+03:00  INFO 796 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-12-16T19:40:31.302+03:00  INFO 796 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-16T19:40:31.303+03:00  INFO 796 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2285 ms
+2024-12-16T19:40:31.512+03:00  INFO 796 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-16T19:40:31.806+03:00  INFO 796 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@624b523
+2024-12-16T19:40:31.808+03:00  INFO 796 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-16T19:40:31.876+03:00  INFO 796 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-16T19:40:31.961+03:00  INFO 796 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-12-16T19:40:31.964+03:00  INFO 796 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-12-16T19:40:32.464+03:00  INFO 796 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-16T19:40:32.580+03:00  WARN 796 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-16T19:40:34.096+03:00  INFO 796 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-16T19:40:34.103+03:00  INFO 796 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-16T19:40:34.851+03:00  WARN 796 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-16T19:40:35.223+03:00  INFO 796 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6d2f910b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f451970, org.springframework.security.web.context.SecurityContextHolderFilter@705dc1a6, org.springframework.security.web.header.HeaderWriterFilter@2932721e, org.springframework.security.web.authentication.logout.LogoutFilter@67cd193d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@43414b88, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7af7c9aa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fe2c5ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a7c8cb7, org.springframework.security.web.access.ExceptionTranslationFilter@1ce45e18, org.springframework.security.web.access.intercept.AuthorizationFilter@560c3758]
+2024-12-16T19:40:35.569+03:00  INFO 796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-16T19:40:35.580+03:00  INFO 796 --- [main] r.p.c.CongratSystemApplication           : Started CongratSystemApplication in 7.595 seconds (process running for 8.989)
+2024-12-16T19:40:48.840+03:00  INFO 796 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-16T19:40:48.841+03:00  INFO 796 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-16T19:40:48.842+03:00  INFO 796 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-16T19:40:48.852+03:00 DEBUG 796 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /simplePages/main
+2024-12-16T19:40:48.872+03:00 DEBUG 796 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /simplePages/main
+2024-12-16T19:40:49.421+03:00 DEBUG 796 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-16T19:40:49.479+03:00 DEBUG 796 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /js/mainJs.js
+2024-12-16T19:40:49.484+03:00 DEBUG 796 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /js/index.js
+2024-12-16T19:40:49.489+03:00 DEBUG 796 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/logo.png
+2024-12-16T19:40:49.489+03:00 DEBUG 796 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /css/mainStyle.css
+2024-12-16T19:40:49.490+03:00 DEBUG 796 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /images/github-logo.png
+2024-12-16T19:40:49.492+03:00 DEBUG 796 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /css/mainStyle.css
+2024-12-16T19:40:49.493+03:00 DEBUG 796 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /js/mainJs.js
+2024-12-16T19:40:49.494+03:00 DEBUG 796 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/logo.png
+2024-12-16T19:40:49.495+03:00 DEBUG 796 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /js/index.js
+2024-12-16T19:40:49.495+03:00 DEBUG 796 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /images/github-logo.png
+2024-12-16T19:40:49.513+03:00 DEBUG 796 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-16T19:40:49.513+03:00 DEBUG 796 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-16T19:40:49.519+03:00 DEBUG 796 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-16T19:40:49.521+03:00 DEBUG 796 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-16T19:40:49.523+03:00 DEBUG 796 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-16T19:40:49.530+03:00 DEBUG 796 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/friends/showFriends
+2024-12-16T19:40:49.530+03:00 DEBUG 796 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/congrats/showCongrats
+2024-12-16T19:40:49.533+03:00 DEBUG 796 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-16T19:40:49.533+03:00 DEBUG 796 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-16T19:40:49.632+03:00 DEBUG 796 --- [http-nio-8080-exec-7] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/friends/showFriends?continue to session
+2024-12-16T19:40:49.632+03:00 DEBUG 796 --- [http-nio-8080-exec-8] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/congrats/showCongrats?continue to session
+2024-12-16T19:40:49.635+03:00 DEBUG 796 --- [http-nio-8080-exec-7] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/authReg/auth
+2024-12-16T19:40:49.635+03:00 DEBUG 796 --- [http-nio-8080-exec-8] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/authReg/auth
+2024-12-16T19:40:49.644+03:00 DEBUG 796 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /authReg/auth
+2024-12-16T19:40:49.644+03:00 DEBUG 796 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /authReg/auth
+2024-12-16T19:40:49.662+03:00 DEBUG 796 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-16T19:40:49.667+03:00 DEBUG 796 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /authReg/auth
+2024-12-16T19:40:49.669+03:00 DEBUG 796 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /authReg/auth
+2024-12-16T19:40:49.679+03:00 DEBUG 796 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-16T19:41:13.726+03:00  INFO 796 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-16T19:41:13.727+03:00  INFO 796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-16T19:41:13.732+03:00  INFO 796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
