@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<script src="/js/gpt.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример ввода поля</title>
+
+</head>
+<body>
+<form th:action="@{/simplePages/gpt}" method="post">
+    <label for="question">Введите что-то:</label>
+    <input type="text" id="question" name="inputField">
+    <a>
+        <button onclick="GptTest()" type="button">Отправить</button>
+    </a>
+</form>
+
+</body>
+</html>
